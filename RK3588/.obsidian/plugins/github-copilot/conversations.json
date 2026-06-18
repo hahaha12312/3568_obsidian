@@ -1,0 +1,29 @@
+{
+  "conversations": [
+    {
+      "id": "1776414358206",
+      "title": "what can you do",
+      "messages": [
+        {
+          "id": "1776414358206",
+          "content": "what can you do",
+          "role": "user",
+          "timestamp": 1776414358206
+        },
+        {
+          "id": "chatcmpl-DVYoS2EjNi7Wbc7ho9EqmErkCbyUy",
+          "content": "I can help you use Obsidian more effectively—both for writing and for building a system around your notes. Here are the main things I can do:\n\n## Note writing & editing\n- Draft new notes from a prompt (meeting notes, research notes, daily notes, project specs).\n- Rewrite/clarify existing text, make it shorter/longer, or change tone.\n- Summarize long notes and extract key points, action items, and decisions.\n- Turn messy notes into clean sections (headings, bullets, checklists).\n\n## Obsidian structure & workflows\n- Propose folder + tag + naming conventions (PARA, Zettelkasten, MOC/Index notes, etc.).\n- Create templates (Daily/Weekly notes, meeting template, project template).\n- Design linking strategies (backlinks, hub notes, status pages).\n- Help plan metadata (YAML frontmatter) for search and Dataview.\n\n## Queries, automation, and plugins\n- Write **Dataview** queries (tables, lists, tasks dashboards).\n- Help with **Tasks** plugin queries and recurring task setups.\n- Create **QuickAdd** capture flows and macros.\n- Suggest useful plugins for your goals and how to configure them.\n\n## Organization & knowledge management\n- Convert notes into atomic notes and connect them with links.\n- Build Maps of Content (MOCs) for areas like “Work”, “Research”, “Health”, etc.\n- Create dashboards: overdue tasks, active projects, notes by topic, reading pipeline.\n\n## If you share content (text or screenshots)\n- I can clean up formatting, detect missing links, propose tags, and generate queries/dashboards based on your vault layout.\n\n### Tell me what you’re trying to do\n1) What’s your main use case: work projects, study/research, personal journal, or something else?  \n2) Are you using any plugins (Dataview/Tasks/Calendar/Periodic Notes/QuickAdd)?  \n3) Do you prefer folders, tags, or mostly links?",
+          "role": "assistant",
+          "timestamp": 1776414382010
+        }
+      ],
+      "createdAt": 1776414358206,
+      "updatedAt": 1776414382010,
+      "model": {
+        "label": "GPT-5.2",
+        "value": "gpt-5.2"
+      }
+    }
+  ],
+  "activeConversationId": "1776414358206"
+}

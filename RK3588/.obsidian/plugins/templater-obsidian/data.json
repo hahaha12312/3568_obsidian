@@ -1,0 +1,42 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "05_Useful_Scripts",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "02_Projects(项目目录)/RK3588_7301P/03_Bug_Tracker (问题追踪库)",
+      "template": "05_Useful_Scripts/Template_Bug_Record.md"
+    },
+    {
+      "folder": "",
+      "template": ""
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1
+}
