@@ -3,9 +3,9 @@ filters:
     - type == "book"
     - '!file.inFolder("50-Meta/Templates")'
 formulas:
-  未回顾天数: 'if(last_reviewed, ((today() - last_reviewed) / 86400000).round(0))'
+  未回顾天数: if(last_reviewed, ((today() - last_reviewed) / 86400000).round(0))
   提炼数量: file.backlinks.length
-  阅读天数: 'if(started && finished, ((finished - started) / 86400000).round(0))'
+  阅读天数: if(started && finished, ((finished - started) / 86400000).round(0))
 properties:
   note.rating:
     displayName: 评分
@@ -34,8 +34,7 @@ views:
     name: 在读
     filters:
       and:
-        - 'status == "reading"'
-    image: note.cover
+        - status == "reading"
     order:
       - file.name
       - author
@@ -43,7 +42,7 @@ views:
     sort:
       - property: started
         direction: ASC
-
+    image: note.cover
   - type: table
     name: 全部书籍
     order:
@@ -59,12 +58,11 @@ views:
     summaries:
       file.name: Filled
       rating: Average
-
   - type: table
     name: 真正改变我的书
     filters:
       and:
-        - 'status == "finished"'
+        - status == "finished"
     order:
       - file.name
       - author
@@ -74,12 +72,11 @@ views:
       - property: formula.提炼数量
         direction: DESC
     limit: 20
-
   - type: table
     name: 有手写摘录
     filters:
       and:
-        - '!excerpt_pdf.isEmpty()'
+        - "!excerpt_pdf.isEmpty()"
     order:
       - file.name
       - author
@@ -88,12 +85,11 @@ views:
     sort:
       - property: formula.提炼数量
         direction: ASC
-
   - type: table
     name: 读完但没提炼
     filters:
       and:
-        - 'status == "finished"'
+        - status == "finished"
         - formula.提炼数量 == 0
     order:
       - file.name
@@ -102,12 +98,11 @@ views:
     sort:
       - property: finished
         direction: ASC
-
   - type: table
     name: 想读
     filters:
       and:
-        - 'status == "inbox"'
+        - status == "inbox"
     order:
       - file.name
       - author

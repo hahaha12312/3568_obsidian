@@ -30,7 +30,6 @@ views:
         direction: DESC
     summaries:
       file.name: Filled
-
   - type: table
     name: 最近新增
     filters:
@@ -43,7 +42,6 @@ views:
     sort:
       - property: file.ctime
         direction: DESC
-
   - type: table
     name: 枢纽笔记
     filters:
@@ -56,12 +54,11 @@ views:
     sort:
       - property: formula.被引用
         direction: DESC
-
   - type: table
     name: 需要长大（还是幼苗）
     filters:
       and:
-        - 'status == "seedling"'
+        - status == "seedling"
     order:
       - file.name
       - topics

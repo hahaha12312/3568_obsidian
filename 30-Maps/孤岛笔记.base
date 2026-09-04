@@ -21,8 +21,11 @@ views:
       - file.ctime
     sort:
       - property: file.ctime
+        direction: DESC
+      - property: topics
         direction: ASC
-
+      - property: file.name
+        direction: DESC
   - type: table
     name: 死胡同（它不引用任何笔记）
     filters:

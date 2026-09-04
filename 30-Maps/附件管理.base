@@ -3,7 +3,7 @@ filters:
     - file.inFolder("Attachments")
 formulas:
   引用数: file.backlinks.length
-  体积MB: '(file.size / 1048576).round(1)'
+  体积MB: (file.size / 1048576).round(1)
 properties:
   formula.引用数:
     displayName: 被引用
@@ -25,7 +25,6 @@ views:
         direction: DESC
     summaries:
       file.name: Filled
-
   - type: table
     name: 未被引用的附件
     filters:
@@ -39,7 +38,6 @@ views:
     sort:
       - property: formula.体积MB
         direction: DESC
-
   - type: table
     name: 大文件（注意仓库体积）
     filters:

@@ -1,10 +1,10 @@
 filters:
   and:
-    - 'status == "finished"'
+    - status == "finished"
     - type == "book"
     - '!file.inFolder("50-Meta/Templates")'
 formulas:
-  未回顾天数: 'if(last_reviewed, ((today() - last_reviewed) / 86400000).round(0), 9999)'
+  未回顾天数: if(last_reviewed, ((today() - last_reviewed) / 86400000).round(0), 9999)
 properties:
   note.author:
     displayName: 作者
@@ -30,7 +30,6 @@ views:
       - property: formula.未回顾天数
         direction: DESC
     limit: 15
-
   - type: table
     name: 从未回顾过
     filters:
