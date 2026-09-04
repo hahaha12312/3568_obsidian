@@ -1,0 +1,37 @@
+filters:
+  and:
+    - file.hasTag("type/permanent")
+    - '!file.inFolder("50-Meta/Templates")'
+formulas:
+  被引用: file.backlinks.length
+properties:
+  formula.被引用:
+    displayName: 被引用
+  note.topics:
+    displayName: 主题
+views:
+  - type: table
+    name: 孤岛笔记（没有任何笔记引用它）
+    filters:
+      and:
+        - formula.被引用 == 0
+    order:
+      - file.name
+      - topics
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: ASC
+
+  - type: table
+    name: 死胡同（它不引用任何笔记）
+    filters:
+      and:
+        - file.links.isEmpty()
+    order:
+      - file.name
+      - topics
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: ASC

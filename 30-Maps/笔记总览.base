@@ -1,0 +1,71 @@
+filters:
+  and:
+    - file.hasTag("type/permanent")
+    - '!file.inFolder("50-Meta/Templates")'
+formulas:
+  被引用: file.backlinks.length
+  外链数: file.links.length
+properties:
+  note.status:
+    displayName: 成熟度
+  note.topics:
+    displayName: 主题
+  note.confidence:
+    displayName: 把握
+  formula.被引用:
+    displayName: 被引用
+  formula.外链数:
+    displayName: 外链
+views:
+  - type: table
+    name: 全部永久笔记
+    order:
+      - file.name
+      - topics
+      - status
+      - formula.被引用
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: DESC
+    summaries:
+      file.name: Filled
+
+  - type: table
+    name: 最近新增
+    filters:
+      and:
+        - file.ctime >= today() - "30d"
+    order:
+      - file.name
+      - topics
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: DESC
+
+  - type: table
+    name: 枢纽笔记
+    filters:
+      and:
+        - formula.被引用 >= 3
+    order:
+      - file.name
+      - topics
+      - formula.被引用
+    sort:
+      - property: formula.被引用
+        direction: DESC
+
+  - type: table
+    name: 需要长大（还是幼苗）
+    filters:
+      and:
+        - 'status == "seedling"'
+    order:
+      - file.name
+      - topics
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: ASC
