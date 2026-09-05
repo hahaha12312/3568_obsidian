@@ -1,0 +1,17 @@
+{
+  "attachmentFolderPath": "Attachments/_inline",
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00-Inbox",
+  "trashOption": "local",
+  "promptDelete": false,
+  "showLineNumber": false,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "userIgnoreFilters": [
+    "50-Meta/Templates/"
+  ]
+}

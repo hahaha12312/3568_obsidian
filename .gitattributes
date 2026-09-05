@@ -1,0 +1,16 @@
+# Markdown 与配置统一按文本处理，行尾在检出时交由 core.autocrlf 决定
+*.md      text
+*.base    text
+*.canvas  text
+*.json    text
+
+# 附件按二进制处理，避免被行尾转换损坏
+*.pdf     binary
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.webp    binary
+*.gif     binary
+
+# 让 GitHub 语言统计忽略 Obsidian 配置目录
+.obsidian/** linguist-vendored
