@@ -1,0 +1,46 @@
+filters:
+  and:
+    - 'status == "finished"'
+    - type == "book"
+    - '!file.inFolder("50-Meta/Templates")'
+formulas:
+  未回顾天数: 'if(last_reviewed, ((today() - last_reviewed) / 86400000).round(0), 9999)'
+properties:
+  note.author:
+    displayName: 作者
+  note.rating:
+    displayName: 评分
+  note.last_reviewed:
+    displayName: 上次回顾
+  formula.未回顾天数:
+    displayName: 已搁置(天)
+views:
+  - type: table
+    name: 待回顾（超过 90 天）
+    filters:
+      and:
+        - formula.未回顾天数 > 90
+    order:
+      - file.name
+      - author
+      - rating
+      - last_reviewed
+      - formula.未回顾天数
+    sort:
+      - property: formula.未回顾天数
+        direction: DESC
+    limit: 15
+
+  - type: table
+    name: 从未回顾过
+    filters:
+      and:
+        - last_reviewed.isEmpty()
+    order:
+      - file.name
+      - author
+      - rating
+      - finished
+    sort:
+      - property: rating
+        direction: DESC

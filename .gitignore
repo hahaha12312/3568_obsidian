@@ -1,0 +1,39 @@
+# ── 每设备 UI 状态（每次点击都会改写，不含任何内容）────────────────────
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace.json.bak
+
+# ── 可再生的缓存与索引 ──────────────────────────────────────────────
+.obsidian/cache/
+.obsidian/plugins/**/cache/
+.obsidian/plugins/**/*.cache
+.smart-env/
+.smart-connections/
+
+# ── 含密钥或每设备状态的插件数据 ────────────────────────────────────
+.obsidian/plugins/obsidian-git/data.json
+.obsidian/plugins/obsidian-local-rest-api/data.json
+.obsidian/plugins/copilot/data.json
+.obsidian/plugins/smart-connections/data.json
+.obsidian-git-data
+.obsidian-headless/
+
+# ── Obsidian 回收站 ─────────────────────────────────────────────────
+.trash/
+
+# ── 临时/草稿文件 ───────────────────────────────────────────────────
+Untitled.md
+Untitled.base
+Untitled.canvas
+
+# ── 操作系统垃圾文件 ────────────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# ── 永不入库 ────────────────────────────────────────────────────────
+.env
+.env.*
+*.pem
+*.key
