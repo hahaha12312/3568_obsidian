@@ -1,0 +1,38 @@
+views:
+  - type: table
+    name: 知识点进度
+    filters:
+      and:
+        - file.inFolder("知识点")
+        - 类型 == "知识点"
+    groupBy:
+      property: 领域
+      direction: ASC
+    order:
+      - file.name
+      - 周次
+      - 优先级
+      - 状态
+  - type: table
+    name: 周计划进度
+    filters:
+      and:
+        - file.inFolder("周计划")
+        - 类型 == "周计划"
+    order:
+      - file.name
+      - 周次
+      - 状态
+      - 开始日期
+      - 完成日期
+  - type: table
+    name: 实验列表
+    filters:
+      and:
+        - file.inFolder("实验")
+        - 类型 == "实验"
+    order:
+      - file.name
+      - 周次
+      - 日期
+      - 状态
